@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050a08">
+    <title>NEURAL // CALC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-grid"></div>
+    <div class="scanlines"></div>
+
+    <main class="app">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">&lt;/&gt;</div>
+                <div>
+                    <h1>NEURAL<span>//</span>CALC</h1>
+                    <p>SCIENTIFIC COMPUTATION SYSTEM</p>
+                </div>
+            </div>
+
+            <div class="status">
+                <span class="pulse"></span>
+                ALL SYSTEMS OPERATIONAL
+            </div>
+        </header>
+
+        <nav class="system-bar">
+            <span>USER: NAURA@LOCALHOST</span>
+            <span>BUILD: 2026.10</span>
+            <span>ENGINE: JAVASCRIPT</span>
+        </nav>
+
+        <section class="hero">
+            <div>
+                <p class="eyebrow">[ SYSTEM INTERFACE / 001 ]</p>
+                <h2>Think in <span>Numbers.</span><br>Build the Future.</h2>
+                <p class="hero-description">
+                    A scientific calculator built for curious minds.
+                    Precision meets code.
+                </p>
+            </div>
+
+            <div class="hero-decoration">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="core">&lt; / &gt;</div>
+                <span class="deco-label">CORE_ENGINE</span>
+            </div>
+        </section>
+
+        <section class="workspace">
+            <article class="panel calculator-panel">
+                <div class="panel-heading">
+                    <div>
+                        <span class="panel-index">01</span>
+                        <h3>CALCULATOR.EXE</h3>
+                    </div>
+                    <span class="mini-status">READY</span>
+                </div>
+
+                <div class="screen">
+                    <div class="screen-top">
+                        <span>OUTPUT_DISPLAY</span>
+                        <span id="angleMode">DEG</span>
+                    </div>
+
+                    <div id="expression" class="expression">AWAITING_INPUT</div>
+                    <input id="display" type="text" value="0"
+                        readonly aria-label="Hasil kalkulator">
+
+                    <div class="screen-bottom">
+                        <span>NEURAL MATH ENGINE</span>
+                        <span class="cursor">_</span>
+                    </div>
+                </div>
+
+                <div class="button-grid">
+                    <button class="btn function" data-action="scientific" data-value="sin">sin</button>
+                    <button class="btn function" data-action="scientific" data-value="cos">cos</button>
+                    <button class="btn function" data-action="scientific" data-value="tan">tan</button>
+                    <button class="btn danger" data-action="delete">DEL</button>
+
+                    <button class="btn function" data-action="scientific" data-value="sqrt">√x</button>
+                    <button class="btn function" data-action="scientific" data-value="square">x²</button>
+                    <button class="btn function" data-action="scientific" data-value="percent">%</button>
+                    <button class="btn danger" data-action="clear">AC</button>
+
+                    <button class="btn number" data-value="7">7</button>
+                    <button class="btn number" data-value="8">8</button>
+                    <button class="btn number" data-value="9">9</button>
+                    <button class="btn operator" data-value="/">÷</button>
+
+                    <button class="btn number" data-value="4">4</button>
+                    <button class="btn number" data-value="5">5</button>
+                    <button class="btn number" data-value="6">6</button>
+                    <button class="btn operator" data-value="*">×</button>
+
+                    <button class="btn number" data-value="1">1</button>
+                    <button class="btn number" data-value="2">2</button>
+                    <button class="btn number" data-value="3">3</button>
+                    <button class="btn operator" data-value="-">−</button>
+
+                    <button class="btn function small" data-action="angle">DEG/RAD</button>
+                    <button class="btn number" data-value="0">0</button>
+                    <button class="btn number" data-value=".">.</button>
+                    <button class="btn operator" data-value="+">+</button>
+
+                    <button class="btn function" data-value="(">(</button>
+                    <button class="btn function" data-value=")">)</button>
+                    <button class="btn function" data-value="pi">π</button>
+                    <button class="btn execute" data-action="calculate">EXECUTE ↗</button>
+                </div>
+
+                <div class="keyboard-note">
+                    <span>⌨</span>
+                    KEYBOARD ENABLED
+                    <span class="note-right">ENTER = EXECUTE</span>
+                </div>
+            </article>
+
+            <aside class="right-column">
+                <section class="panel code-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="panel-index blue">02</span>
+                            <h3>SOURCE_CODE.JS</h3>
+                        </div>
+                        <span class="file-type">JS</span>
+                    </div>
+
+                    <div class="code-editor">
+                        <div class="code-row"><span>01</span><code><i>const</i> system = {</code></div>
+                        <div class="code-row"><span>02</span><code>&nbsp; name: <b>"NEURAL"</b>,</code></div>
+                        <div class="code-row"><span>03</span><code>&nbsp; mode: <b>"SCIENTIFIC"</b>,</code></div>
+                        <div class="code-row"><span>04</span><code>&nbsp; online: <strong>true</strong></code></div>
+                        <div class="code-row"><span>05</span><code>};</code></div>
+                        <div class="code-row blank"><span>06</span><code></code></div>
+                        <div class="code-row"><span>07</span><code><i>function</i> calculate() {</code></div>
+                        <div class="code-row"><span>08</span><code>&nbsp; <i>return</i> mathEngine();</code></div>
+                        <div class="code-row"><span>09</span><code>}</code></div>
+                        <div class="code-row blank"><span>10</span><code></code></div>
+                        <div class="code-row"><span>11</span><code class="comment">// computing result</code></div>
+                        <div class="code-row"><span>12</span><code>console.<em>log</em>(<b>"READY"</b>);</code></div>
+                        <div class="code-row"><span>13</span><code class="comment">// keep building<span class="cursor">_</span></code></div>
+                    </div>
+
+                    <div class="code-footer">
+                        <span class="pulse"></span>
+                        <span>LIVE ENVIRONMENT</span>
+                        <span>UTF-8</span>
+                    </div>
+                </section>
+
+                <section class="panel terminal-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="panel-index">03</span>
+                            <h3>TERMINAL.LOG</h3>
+                        </div>
+                        <span class="terminal-icon">⌘</span>
+                    </div>
+
+                    <div id="terminalLog" class="terminal-log" aria-live="polite">
+                        <p><span>[OK]</span> Interface initialized.</p>
+                        <p><span>[OK]</span> Math engine loaded.</p>
+                        <p><span>[READY]</span> Awaiting input<span class="cursor">_</span></p>
+                    </div>
+                </section>
+
+                <section class="metrics">
+                    <div><span>ENGINE</span><strong>JS CORE</strong></div>
+                    <div><span>MODE</span><strong id="modeMetric">DEGREE</strong></div>
+                    <div><span>STATUS</span><strong class="green-text">ACTIVE</strong></div>
+                </section>
+            </aside>
+        </section>
+
+        <footer class="footer">
+            <span>NEURAL SYSTEMS © 2026</span>
+            <span>DESIGNED WITH LOGIC <b>+</b> CREATIVITY</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
